@@ -4,7 +4,7 @@ import { InlineConfig } from 'vite'
 
 export default defineNuxtConfig({
 	srcDir: 'client/',
-	css: ['~/assets/css/main.css'],
+	css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass'],
 	postcss: {
 		plugins: {
 			tailwindcss: {},
