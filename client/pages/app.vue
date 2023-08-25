@@ -1,7 +1,5 @@
 <template>
-	<div class="">
-		<NuxtPage />
-	</div>
+	<NuxtPage />
 </template>
 <script lang="ts">
 export default {

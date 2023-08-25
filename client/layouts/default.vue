@@ -1,7 +1,7 @@
 <template>
-	<div class="flex flex-row gap-4">
+	<div class="flex flex-row">
 		<NavBar />
-		<div class="flex flex-col">
+		<div class="flex flex-col w-full h-auto">
 			<div class="w-auto h-auto p-4">
 				<slot />
 			</div>
@@ -9,8 +9,4 @@
 		</div>
 	</div>
 </template>
-<script>
-export default {
-	name: 'DefaultLayout',
-}
-</script>
+<script lang="ts" setup></script>
