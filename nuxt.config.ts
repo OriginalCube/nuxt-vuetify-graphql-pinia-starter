@@ -4,7 +4,16 @@ import { InlineConfig } from 'vite'
 
 export default defineNuxtConfig({
 	srcDir: 'client/',
-	build: { transpile: ['vuetify'] },
+	css: ['~/assets/css/main.css'],
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
+		},
+	},
+	build: {
+		transpile: ['vuetify'],
+	},
 	imports: { dirs: ['./stores'] },
 	apollo: {
 		autoImports: true,
