@@ -10,8 +10,4 @@
 	</div>
 </template>
 
-<script>
-export default {
-	name: 'NavBar',
-}
-</script>
+<script lang="ts" setup></script>
