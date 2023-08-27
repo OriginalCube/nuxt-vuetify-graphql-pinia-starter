@@ -1,5 +1,5 @@
 <template>
-	<div class="h-80 w-full p-2 bg-slate-900 flex items-center justify-evenly relative bottom-0">
+	<footer class="h-80 w-full p-2 bg-slate-900 flex items-center justify-evenly relative bottom-0">
 		<div class="h-5/6 w-11/12 flex flex-col gap-8">
 			<div class="flex items-center gap-4 w-auto h-16">
 				<img src="/assets/icons/galaxy.png" class="h-5/6 w-auto" alt="" />
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 </template>
 
 <script setup lang="ts">

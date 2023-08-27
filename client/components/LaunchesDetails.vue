@@ -5,7 +5,7 @@
 			<p class="w-full text-4xl font-bold text-white">{{ mission_name }}</p>
 			<div class="flex items-center justify-between flex-wrap w-full">
 				<LauncheIcon :info="rocket_name" image="rocket" :date="false" />
-				<LauncheIcon :info="launch_date" image="rocket" :date="true" />
+				<LauncheIcon :info="launch_date" image="calendar" :date="true" />
 				<button class="text-white p-2" @click="handleDetails">Details</button>
 			</div>
 			<div v-if="showDetails" class="w-full h-auto p-2">
