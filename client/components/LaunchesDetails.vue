@@ -8,7 +8,7 @@
 				<LauncheIcon :info="launch_date" image="rocket" :date="true" />
 				<button class="text-white p-2" @click="handleDetails">Details</button>
 			</div>
-			<div v-if="showDetails" class="block w-full h-auto p-2">
+			<div v-if="showDetails" class="w-full h-auto p-2">
 				<p class="text-md w-full text-left text-white">{{ details ? details : 'No Details' }}</p>
 			</div>
 		</div>
