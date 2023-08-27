@@ -10,18 +10,12 @@
 	</div>
 </template>
 
-<script lang="ts">
-export default {
-	props: {
-		image: String,
-		name: String,
-	},
-	methods: {
-		getImage(image: string) {
-			return `/assets/icons/${image}.png`
-		},
-	},
+<script lang="ts" setup>
+defineProps({
+	image: { type: String, default: 'rocket' },
+	name: String,
+})
+const getImage = (image: string) => {
+	return `/assets/icons/${image}.png`
 }
 </script>
-
-<style></style>
