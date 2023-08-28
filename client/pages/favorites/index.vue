@@ -11,7 +11,7 @@
 					:id="fav.id"
 					:key="index"
 					:name="fav.name"
-					:first_flight="fav.first_flight"
+					:first_flight="fav.firstFlight"
 				/>
 			</div>
 			<div v-if="favorites.length === 0" class="w-2/5 h-auto">
