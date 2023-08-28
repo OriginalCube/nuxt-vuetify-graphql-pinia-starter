@@ -1,7 +1,7 @@
 <template>
 	<div class="w-1/2 flex items-center justify-start gap-2">
 		<img class="h-8 p-1 w-auto" :src="imageUrl(image)" alt="" />
-		<p class="text-md text-white">{{ getInfo(info, date) }}</p>
+		<p class="text-md text-pallete-accent">{{ getInfo(info, date) }}</p>
 	</div>
 </template>
 

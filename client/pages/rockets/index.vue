@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full h-auto">
-		<p class="text-7xl text-white">Rockets</p>
+		<p class="text-7xl text-pallete-header">Rockets</p>
 		<div v-if="data" class="w-full h-auto flex flex-wrap items-center justify-around gap-12">
 			<RocketDetails
 				v-for="(rocketData, index) in data.rockets"
@@ -47,4 +47,13 @@ interface RocketProps {
 }
 
 const { data } = useAsyncQuery<RocketProps>(query)
+
+useHead({
+	title: 'Rocket Dashboard',
+	meta: [
+		{
+			name: 'All SpaceX Rockets ',
+		},
+	],
+})
 </script>

@@ -9,7 +9,17 @@ module.exports = {
 		'./client/app.vue',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				pallete: {
+					background: '#000c26',
+					header: '#f8ce47',
+					accent: '#ea9f0d',
+					himp: '#ea9f0d',
+					imp: '#d82cd0',
+				},
+			},
+		},
 	},
 	plugins: [],
 }

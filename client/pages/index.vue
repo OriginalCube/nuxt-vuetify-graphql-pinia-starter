@@ -52,4 +52,13 @@ const searchYear = (year: number) => {
 		(e: any) => new Date(e.launch_date_utc).getFullYear() === year,
 	)
 }
+
+useHead({
+	title: 'Launches Dashboard',
+	meta: [
+		{
+			name: 'SpaceX Launches Detail Page',
+		},
+	],
+})
 </script>
