@@ -1,9 +1,14 @@
 <template>
 	<div class="w-full h-auto">
+		<div class="w-full h-auto flex items-center justify-start gap-8">
+			<img src="/assets/icons/half-moon.png" class="h-24 w-auto p-2" alt="" />
+			<p class="text-6xl text-pallete-header">Launches</p>
+		</div>
 		<SearchBar @sortDate="reverseDate" @searchYear="searchYear" />
+
 		<div v-if="datas" class="w-full h-auto flex flex-wrap items-center justify-around gap-12">
 			<LaunchesDetails
-				v-for="(launch, index) in datas.launches"
+				v-for="(launch, index) in datas"
 				:key="index"
 				:mission_name="launch.mission_name"
 				:launch_date="launch.launch_date_utc"
@@ -40,17 +45,23 @@ interface LaunchesProps {
 }
 
 const { data } = useAsyncQuery<LaunchesProps>(query)
-const datas = ref(data)
-
+const datas = ref(data.value?.launches)
 const reverseDate = () => {
-	datas.value.value = datas.value.launches.reverse()
+	datas.value = datas.value?.reverse()
 }
 
 const searchYear = (year: number) => {
-	console.log(data._rawValue)
-	data.value.launches = data._rawValue.launches.filter(
-		(e: any) => new Date(e.launch_date_utc).getFullYear() === year,
-	)
+	const infoArr = []
+	if (year !== 0) {
+		for (let i = 0; i < data.value?.launches.length; ++i) {
+			if (new Date(data.value?.launches[i].launch_date_utc).getFullYear() === year) {
+				infoArr.push(data.value?.launches[i])
+			}
+		}
+		datas.value = infoArr
+	} else {
+		datas.value = data.value?.launches
+	}
 }
 
 useHead({

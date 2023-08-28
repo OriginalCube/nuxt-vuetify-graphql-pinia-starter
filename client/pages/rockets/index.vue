@@ -1,6 +1,9 @@
 <template>
 	<div class="w-full h-auto">
-		<p class="text-7xl text-pallete-header">Rockets</p>
+		<div class="w-full h-auto flex items-center justify-start gap-8">
+			<img src="/assets/icons/rocketThumbnail.png" class="h-24 w-auto p-2" alt="" />
+			<p class="text-6xl text-pallete-header">Rockets</p>
+		</div>
 		<div v-if="data" class="w-full h-auto flex flex-wrap items-center justify-around gap-12">
 			<RocketDetails
 				v-for="(rocketData, index) in data.rockets"

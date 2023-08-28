@@ -6,7 +6,7 @@
 			>
 				<input
 					v-model="year"
-					class="border-2 w-full p-3 text-md outline-none text-white"
+					class="border-2 w-full p-3 text-md outline-none text-pallete-accent"
 					placeholder="Enter Year Launch"
 					type="number"
 					name="search"
@@ -20,8 +20,10 @@
 			</div>
 
 			<div class="flex w-2/3 items-center justify-end gap-2">
-				<div class="w-auto h-auto bg-slate-700 rounded-md">
-					<button class="text-sm rounded-md text-slate-300 shadow-md p-2" @click="handleDate">
+				<div
+					class="w-auto h-auto border-2 border-pallete-imp rounded-md text-pallete-imp hover:bg-pallete-imp hover:text-pallete-background"
+				>
+					<button class="text-sm rounded-md shadow-md p-2" @click="handleDate">
 						Re:Sort By Date
 					</button>
 				</div>

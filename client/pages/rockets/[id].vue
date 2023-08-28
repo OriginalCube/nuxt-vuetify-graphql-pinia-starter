@@ -9,9 +9,15 @@
 				<p class="text-md font-light text-pallete-accent">{{ data.rocket.first_flight }}</p>
 				<p class="text-xl font-normal text-pallete-accent">{{ data.rocket.description }}</p>
 				<div
-					class="h-auto border-2 border-pallete-imp text-pallete-imp cursor-pointer rounded-md w-2/3 hover:bg-pallete-imp hover:text-pallete-background"
+					class="h-auto border-2 flex items-center justify-around border-pallete-imp text-pallete-imp cursor-pointer rounded-md w-2/3 hover:bg-pallete-imp hover:text-pallete-background"
 				>
-					<button class="outline-none p-2 m-auto" @click="handleFavorites">Add to Favorites</button>
+					<button
+						class="outline-none p-2 m-auto"
+						@click="handleFavorites(data.rocket.name, data.rocket.first_flight)"
+					>
+						{{ isFavorite(favorites) ? 'Favorited' : 'Add to Favorite' }}
+					</button>
+					<img src="/assets/icons/bookmark.png" class="w-auto h-8 p-2" alt="" />
 				</div>
 			</div>
 		</div>
@@ -31,11 +37,9 @@ useHead({
 	meta: [{ name: `SpaceX Rocket full description` }],
 })
 
-const handleFavorites = () => {
-	console.log('hello practice')
-}
-
 const { id } = useRoute().params
+const favorites = useFavorites()
+
 const query = gql`
 	query ($id: ID!) {
 		rocket(id: $id) {
@@ -56,4 +60,13 @@ const query = gql`
 	}
 `
 const { data } = useAsyncQuery(query, { id: id.toString() })
+
+const handleFavorites = (name: string, firstFlight: string) => {
+	favorites.addFavorite(name, firstFlight, id)
+}
+
+const isFavorite = (e: any) => {
+	const checkFavorite = e.favorites.filter((e: any) => e.id === id)
+	return checkFavorite.length !== 0
+}
 </script>

@@ -8,7 +8,7 @@
 				<NuxtLink to="/rockets">
 					<NavBarIcon name="Rockets" image="rocket" />
 				</NuxtLink>
-				<NavBarIcon name="Favorites" image="bookmark" />
+				<NuxtLink to="/favorites"><NavBarIcon name="Favorites" image="bookmark" /></NuxtLink>
 			</div>
 		</div>
 	</header>
