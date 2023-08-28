@@ -33,6 +33,6 @@ Notes: I was able to do this because fortunately, I did a project that used redu
 Built from August 25 to August 28 <br/>
 Limits:<br/>
 I was only able to design this on a 16:9 1920:1080 resolution.<br/>
-It might work on lower resolution but I'm not confident that it will, if I had more time the design of this in mobile would be similar to Twitter where the navigation bars are at the bottom and most of the body is on top of it. <br/>
+It might work on lower resolution but I'm not confident that it will, if I had more time the design of this in mobile would be similar to Twitter where the navigation bars are at the bottom and most of the body is on top of it. and yeah... I forgot to put icons on every page. 😂 <br/>
 Time spent on this project around 18 hrs provided by wakatime. <br/>
 This is a great and fun exam that I did to learn and practice vue 3.0 and nuxt 3.0 <br/>
